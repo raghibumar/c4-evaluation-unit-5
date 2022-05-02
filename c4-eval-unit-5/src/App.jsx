@@ -1,9 +1,11 @@
+import { Link, Route, Routes } from "react-router-dom";
 import { Home } from "./components/Home";
 import { Login } from "./components/Login";
 import { Logout } from "./components/Logout";
 import { NewOrder } from "./components/NewOrder";
 import { Orders } from "./components/Orders";
 import { ProtectedRoute } from "./components/ProtextedRoute";
+import "./App.css";
 
 function App() {
   return (
@@ -30,6 +32,11 @@ function App() {
         /orders     Orders    Protected
         /neworder   NewOrder  Protected
         */}
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/logout" element={<Logout />}></Route>
+        <Route path="/orders" element={<Orders />}></Route>
+        <Route path="/neworder" element={<NewOrder />}></Route>
       </Routes>
     </div>
   );
